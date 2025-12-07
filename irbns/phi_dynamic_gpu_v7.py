@@ -1,3 +1,9 @@
+from typing import Union, Tuple, Optional
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 
 # ────────────────── 离散 Hausdorff (同 v6) ────────────────
 def _hausdorff_cpu(mask_a, mask_b, dx):
@@ -72,10 +78,6 @@ def boundary_map_update_batch(f, ep, pts, normals):
     return z.detach(), n_z.detach()
 
 
-from typing import Union, Tuple, Optional
-import torch
-import numpy as np
-import matplotlib.pyplot as plt
 
 def phi_dynamic_gpu_v7(
     f, ep,
